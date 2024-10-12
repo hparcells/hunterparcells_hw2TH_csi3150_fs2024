@@ -1,0 +1,140 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* #region Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #fafafa;
+  font-family: 'Lato', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+a, a:visited {
+  color: #2079c7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+main {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 0.5em;
+}
+/* #endregion */
+
+/* #region Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: #222222;
+  color: #fafafa;
+  padding: 1em 0.5em;
+
+  overflow-y: hidden;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+}
+
+.header-link {
+  text-decoration: none;
+  padding: 100% 0.5em;
+
+  color: #fafafa !important;
+}
+.header-link.selected {
+  background-color: #333333;
+}
+.header-link:hover {
+  text-decoration: none;
+}
+/* #endregion */
+
+/* #region Footer */
+footer {
+  padding: 1em;
+  min-height: 150px;
+
+  background-color: #222222;
+
+  color: #fafafa;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer section {
+  flex-grow: 1;
+
+  min-width: 280px;
+}
+footer a, footer a:visited {
+  color: #add8ff;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  flex-grow: 1;
+}
+.footer-links a i {
+  margin-right: 4px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+.copyright {
+  color: #7c7c7c;
+  margin-top: 16px;
+}
+/* #endregion */
+
+/* Elements */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* #region Media Queries */
+@media (max-width: 608px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .header-link.selected {
+    background-color: transparent;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+/* #endregion */
