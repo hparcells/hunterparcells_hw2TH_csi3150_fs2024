@@ -1,0 +1,31 @@
+.hero {
+  height: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.hero-title {
+  font-size: 42px;
+  font-weight: 800;
+}
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  height: 200px;
+}
+
+@media (max-width: 826px) {
+  .hero-right {
+    height: auto;
+  }
+}

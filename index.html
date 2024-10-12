@@ -26,25 +26,31 @@
     </header>
     <main>
       <!-- About -->
-      <section>
-        <section>
-          <img src="./assets/img/hunter.png" alt="Profile Picture" width="250" height="250">
-          <blockquote>
-            <p>If you are thrown into the deep and do not swim, you will drown. So keep swimming.</p>
-          </blockquote>
-        </section>
-        <section>
-          <p>Hello, I'm Hunter, a third year Computer Science student based out of southeast Michigan. I am a self-taught programmer, starting back around 2014-15 with Java and C++ and eventually branching out into the endless world of web development. Currently, I am pursuing a degree in Computer Science at Oakland University with the goal of starting my career within modern web development.</p>
-          <p>To known more about me, check out my <a href="./html/resume.html">resume</a> and <a href="./html/facts.html">fun facts</a> page.</p>
-        </section>
-        <section>
-          <label for="progress">Graduation progress:</label>
-          <span><progress id="progress" value="71" max="130">55%</progress> 71/130 Credits</span>
-        </section>
+      <section class="hero">
+        <div class="hero-wrapper">
+          <section class="hero-left">
+            <img src="./assets/img/hunter.png" alt="Profile Picture" width="200" height="200">
+          </section>
+          <section class="hero-right">
+            <div>
+              <p class="hero-title">Hi, I'm Hunter</p>
+              <blockquote>
+                <p>If you are thrown into the deep and do not swim, you will drown. So keep swimming.</p>
+              </blockquote>
+            </div>
+            <a class="button" href="./html/facts.html">Fun Facts</a>
+          </section>
+        </div>
       </section>
-
-      <!-- Footer -->
+      <p>Hello, I'm Hunter, a third year Computer Science student based out of southeast Michigan. I am a self-taught programmer, starting back around 2014-15 with Java and C++ and eventually branching out into the endless world of web development. Currently, I am pursuing a degree in Computer Science at Oakland University with the goal of starting my career within modern web development.</p>
+      <p>To known more about me, check out my <a href="./html/resume.html">resume</a> and <a href="./html/facts.html">fun facts</a> page.</p>
+      <section>
+        <label for="progress">Graduation progress:</label>
+        <span><progress id="progress" value="71" max="130">55%</progress> 71/130 Credits</span>
+      </section>
     </main>
+
+    <!-- Footer -->
     <footer>
       <section class="footer-left">
         <p class="title">Hunter Parcells</p>

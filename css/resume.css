@@ -1,0 +1,44 @@
+ul { 
+  list-style-type: disc; 
+  list-style-position: inside; 
+}
+ol { 
+  list-style-type: decimal; 
+  list-style-position: inside; 
+}
+ul ul, ol ul { 
+  list-style-type: circle; 
+  list-style-position: inside; 
+  margin-left: 15px; 
+}
+ol ol, ul ol { 
+  list-style-type: lower-latin; 
+  list-style-position: inside; 
+  margin-left: 15px; 
+}
+section section {
+  padding-left: 1em;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+table {
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 1px solid #222222;
+  text-align: left;
+}
+th, td {
+  padding: 4px;
+}
+tr {
+  transition: all 0.2s ease-in-out;
+}
+tbody tr:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}

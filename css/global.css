@@ -17,23 +17,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-main {
-  flex-grow: 1;
+a {
+  word-break: break-word;
 }
-a, a:visited {
+a:not(.button), a:visited:not(.button) {
   color: #2079c7;
   text-decoration: none;
 }
-a:hover {
+a:hover:not(.button) {
   text-decoration: underline;
 }
 main {
+  flex-grow: 1;
+
   display: flex;
   flex-direction: column;
+  gap: 8px;
 
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 0.5em;
+  padding: 1em 0.5em;
+}
+blockquote {
+  padding: 0.5em 8px;
+  border-left: 2px solid #222222;
+  background-color: #efefef;
 }
 /* #endregion */
 
@@ -48,10 +56,15 @@ header {
   color: #fafafa;
   padding: 1em 0.5em;
 
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+}
+header .title {
+  text-align: center;
 }
 nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 nav ul li {
   list-style: none;
@@ -59,7 +72,7 @@ nav ul li {
 
 .header-link {
   text-decoration: none;
-  padding: 100% 0.5em;
+  padding: 1em 0.5em;
 
   color: #fafafa !important;
 }
@@ -74,7 +87,6 @@ nav ul li {
 /* #region Footer */
 footer {
   padding: 1em;
-  min-height: 150px;
 
   background-color: #222222;
 
@@ -85,11 +97,11 @@ footer {
   gap: 16px;
 }
 footer section {
-  flex-grow: 1;
+  flex: 1;
 
-  min-width: 280px;
+  min-width: fit-content;
 }
-footer a, footer a:visited {
+footer a:not(.button), footer a:visited:not(.button) {
   color: #add8ff;
 }
 
@@ -123,6 +135,19 @@ footer a, footer a:visited {
   font-size: 24px;
   font-weight: 600;
 }
+.button {
+  background-color: #222222;
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  width: fit-content;
+}
+.page-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
 
 /* #region Media Queries */
 @media (max-width: 608px) {
@@ -130,11 +155,17 @@ footer a, footer a:visited {
     flex-direction: column;
     justify-content: center;
     gap: 16px;
+    flex-wrap: nowrap;
+  }
+  nav ul {
+    gap: 8px;
   }
   .header-link.selected {
     background-color: transparent;
-    font-weight: 600;
     text-decoration: underline;
+  }
+  .header-link  {
+    margin: 1em;
   }
 }
 /* #endregion */
