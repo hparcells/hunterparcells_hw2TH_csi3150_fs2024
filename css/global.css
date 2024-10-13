@@ -93,6 +93,7 @@ footer {
   color: #fafafa;
 
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -100,6 +101,7 @@ footer section {
   flex: 1;
 
   min-width: fit-content;
+  max-width: 800px;
 }
 footer a:not(.button), footer a:visited:not(.button) {
   color: #add8ff;
