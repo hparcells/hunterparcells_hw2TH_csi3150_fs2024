@@ -1,16 +1,46 @@
-.video {
-  position: relative;
-  width: 520px;
-  height: 0;
-  margin: auto;
-  padding: 0% 0% 56.25%; /* 16:9 ratio */
-  overflow: hidden;
-}
 .video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  max-width: 500px;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.facts-section {
+  margin-bottom: 16px;
+}
+.facts-section > h2 {
+  margin-bottom: 4px;
+}
+
+.book-wrapper {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.book-wrapper > div:first-child {
+  flex: 1;
+  flex-basis: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.music-player {
+  margin-top: 16px;
+  
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.music-player > *:last-child {
+  flex: 1;
+  flex-basis: 400px;
+}
+.video-wrapper {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.video-wrapper > div {
+  flex: 1;
+  flex-basis: 400px;
 }
